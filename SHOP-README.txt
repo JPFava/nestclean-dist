@@ -11,12 +11,15 @@ running it.
 
 Open the Apollo copy
 --------------------
-Unzip NestClean-for-Apollo.zip.
-Right-click NestClean.html → Open with → Google Chrome.
+Latest zip (bookmark this — always the current version):
+
+  https://github.com/JPFava/nestclean-dist/releases/latest/download/NestClean.zip
+
+Unzip. Right-click NestClean.html → Open with → Google Chrome.
 If double-click opens Edge, use Open with Chrome.
 
-Each time NestClean is improved, the zip and the version number are
-updated. Email the new zip to the Apollo and replace the old folder.
+Same pattern as Burl Plate. No Grok sign-in. Replace the old folder
+when the version number changes.
 
 
 Clean
