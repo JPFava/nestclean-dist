@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / FireControl
-Version 1.1.0
+Version 1.1.1
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in FireControl.
@@ -75,7 +75,10 @@ Allow 90° leftovers
                 Long way first. Parts that do not fit long-way stand on
                 end on the remaining strip.
 
-Alternate 180°  Flip every other blank in a row.
+Alternate 180°  Flip every other row so the handle sits against the blade.
+                That is what equalizes head-to-head and tail-to-tail. Leave
+                it on. Same orientation stacks fat tails on fat tails and
+                leaves extra metal between the heads.
 
 Spread          Equal gap both ways after the count. Leave it on unless
                 you want a tight pack.
