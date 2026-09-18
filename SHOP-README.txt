@@ -1,9 +1,9 @@
 NestClean
-Langmuir Apollo / FireControl
-Version 1.1.1
+Langmuir Apollo / LaserControl
+Version 1.1.2
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
-yourself. Download R12. Load that in FireControl.
+yourself. Download R12. Load that in LaserControl.
 
 Nothing in this program uploads your DXF. Work stays on the PC that is
 running it.
@@ -25,7 +25,7 @@ when the version number changes.
 Clean
 -----
 Open a nested sheet (or drop it on the window). NestClean strips the
-wrapper FireControl chokes on and writes R12: LINE, ARC, CIRCLE, layer 0,
+wrapper LaserControl chokes on and writes R12: LINE, ARC, CIRCLE, layer 0,
 color 7, Z = 0.
 
 Export flavor (next to the buttons)
@@ -34,7 +34,7 @@ Export flavor (next to the buttons)
   Lines only   No arcs. Last resort.
 
 The file is ordered for the torch: holes, then cutouts, then the outer,
-one blank at a time, row by row. If FireControl still jumps, turn off
+one blank at a time, row by row. If LaserControl still jumps, turn off
 path optimize so it follows this order.
 
 Close-gap welds open contours (Fusion sketch gaps). Raise it if paths
@@ -46,7 +46,7 @@ small margin.
 
 Why AutoCAD and Fusion keep failing
 -----------------------------------
-The nest is not the problem. FireControl is allergic to the file wrapper.
+The nest is not the problem. LaserControl is allergic to the file wrapper.
 
 AutoCAD 2013 / 2018 DXF carries CLASSES / OBJECTS baggage and leftover
 POINT entities from ARRAY. The laser tries to pierce those dots.
@@ -55,7 +55,7 @@ Fusion LWPOLYLINE, empty sketch exports, and projected-from-face files
 with negative coordinates are the usual follow-up mess.
 
 Skip Fusion for the laser file. Array here (or in AutoCAD), download
-R12, load that in FireControl.
+R12, load that in LaserControl.
 
 
 Nest
@@ -75,10 +75,11 @@ Allow 90° leftovers
                 Long way first. Parts that do not fit long-way stand on
                 end on the remaining strip.
 
-Alternate 180°  Flip every other row so the handle sits against the blade.
-                That is what equalizes head-to-head and tail-to-tail. Leave
-                it on. Same orientation stacks fat tails on fat tails and
-                leaves extra metal between the heads.
+Alternate 180°  Flip every other column (tip against handle along the row).
+                Head-to-head and tail-to-tail each get their own pitch at the
+                min curve gap, then Spread adds the same extra to both — the
+                leftover metal that used to sit between the heads moves onto
+                the tails. Leave it on for the 90-count pack.
 
 Spread          Equal gap both ways after the count. Leave it on unless
                 you want a tight pack.
@@ -91,4 +92,4 @@ Chrome on this PC
 -----------------
 Chrome can package NestClean as its own window. Three-dot menu →
 Cast, save, and share → Install NestClean. Or the install icon on the
-right of the address bar. Pin it next to FireControl.
+right of the address bar. Pin it next to LaserControl.
