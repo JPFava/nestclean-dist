@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.1.2
+Version 1.1.3
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -76,10 +76,8 @@ Allow 90° leftovers
                 end on the remaining strip.
 
 Alternate 180°  Flip every other column (tip against handle along the row).
-                Head-to-head and tail-to-tail each get their own pitch at the
-                min curve gap, then Spread adds the same extra to both — the
-                leftover metal that used to sit between the heads moves onto
-                the tails. Leave it on for the 90-count pack.
+                Head-to-head and tail-to-tail each get their own pitch.
+                Rows stay aligned so steel does not overlap. Leave it on.
 
 Spread          Equal gap both ways after the count. Leave it on unless
                 you want a tight pack.
