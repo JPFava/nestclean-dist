@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.1.4
+Version 1.1.5
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -26,7 +26,8 @@ Clean
 -----
 Open a nested sheet (or drop it on the window). NestClean strips the
 wrapper LaserControl chokes on and writes R12: LINE, ARC, CIRCLE, layer 0,
-color 7, Z = 0.
+color 7, Z = 0. Segments shorter than 0.001 in are dropped so LaserControl
+does not report Missing Offsets on 1-segment slivers.
 
 Export flavor (next to the buttons)
   LINE + ARC   Most primitive. Start here.
