@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.1.7
+Version 1.1.8
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -20,6 +20,10 @@ If double-click opens Edge, use Open with Chrome.
 
 Same pattern as Burl Plate. No Grok sign-in. Replace the old folder
 when the version number changes.
+
+On a phone, Open / Add DXF must go through Files or Downloads — not Camera
+or Photos. Android used to open the camera because DXF is registered as an
+image type.
 
 
 Clean
