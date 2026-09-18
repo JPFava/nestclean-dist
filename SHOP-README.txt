@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.1.3
+Version 1.1.4
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -79,8 +79,11 @@ Alternate 180°  Flip every other column (tip against handle along the row).
                 Head-to-head and tail-to-tail each get their own pitch.
                 Rows stay aligned so steel does not overlap. Leave it on.
 
-Spread          Equal gap both ways after the count. Leave it on unless
-                you want a tight pack.
+Spread          Leftover plate goes into the gaps, not the borders. Min gap
+                is the floor. Outer blanks sit on the keep-out. Leave it on.
+
+Each blank shows "sheet holds N" for the current sheet / gap / 180 / 90
+settings, before you nest. Hit Max to fill that count.
 
 Cut order in the DXF: holes → cutouts → outer, then the next blank,
 row by row, standing leftovers last.
