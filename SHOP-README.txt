@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.0
+Version 1.2.1
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -97,8 +97,9 @@ Add DXF for each blank type. Quantities start at 0 so each shows its
 own max. Set the first type, leftover updates on the others, set the
 next, and so on. Nest packs in the order the blanks are listed.
 90° leftovers only run on the last type so remnant plate goes
-to the next DXF. Spread runs after that nest — it does not
-change how many fit.
+to the next DXF. Empty slots on an incomplete last row stay
+usable — leftover is not only the rectangle outside the first nest.
+Spread runs after that nest — it does not change how many fit.
 
 Cut order in the DXF: holes → cutouts → outer, then the next blank,
 row by row, standing leftovers last.
