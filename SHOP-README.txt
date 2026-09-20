@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.1
+Version 1.2.2
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -88,8 +88,9 @@ Spread          Leftover plate goes into the gaps, not the borders. Min gap
                 is the floor. Outer blanks sit on the keep-out. Leave it on.
 
 Each blank shows "sheet holds N" for an empty plate. Type a quantity and
-the nest updates as you type. The other blanks then show leftover N —
-how many of that type still fit. Max fills that leftover.
+the nest updates as you type. If some do not fit, the box drops to how
+many nested. The other blanks then show max N with the others from that
+nest. Max fills that leftover.
 
 Several DXFs
 ------------
