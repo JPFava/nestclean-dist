@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.5
+Version 1.2.6
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -84,9 +84,9 @@ Alternate 180°  Flip every other column (tip against handle along the row).
                 Head-to-head and tail-to-tail each get their own pitch.
                 Rows stay aligned so steel does not overlap. Leave it on.
 
-Spread          One blank type: leftover plate goes into the gaps, outer
-                blanks sit on the keep-out. Mixed nests stay at min gap
-                so types do not overlap.
+Spread          Extra plate goes into the gaps. Mixed nests fill the
+                leftover height (the empty top). 90° leftovers stay in a
+                clear strip on the end so they do not sit on the 0° nest.
 
 Each blank shows "sheet holds N" on an empty plate. After a nest, each
 shows "N more" — how many of that DXF still fit in leftover plate.
