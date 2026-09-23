@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.8
+Version 1.2.9
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -120,6 +120,19 @@ NestClean lays the cuts on the drawing.
   Amber  a cut that does not sit on the drawing
 Lead-ins shorter than 0.35 in are ignored. Anything farther than
 0.040 in from the line is a miss. Rapids (G0) are not cuts.
+
+Write corrected .tap
+--------------------
+LaserControl does not follow the DXF order, so the cut order has to
+be rewritten in the .tap. The new file:
+  - moves a hole or cutout that has the right shape but the wrong place
+  - drops a cut that is not on a blank
+  - copies a missing hole from a hole Apollo did cut
+  - cuts the insides of a blank, then its outline, then the next blank
+The head follows the row. It does not jump across a blank that is
+already free to tilt. Feed, pierce, and laser on/off stay as Apollo
+wrote them. Kerf offset on a cut that is already in the right place
+is left alone. The original .tap is not changed.
 
 
 Chrome on this PC
