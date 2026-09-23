@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.7
+Version 1.2.8
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -107,6 +107,19 @@ Spread runs after that nest — it does not change how many fit.
 
 Cut order in the DXF: holes → cutouts → outer, then the next blank,
 row by row, standing leftovers last.
+
+Every outside is wound the same way. Every cutout is wound the opposite
+way, so LaserControl's kerf offset stays on the scrap side. Circles stay
+circles — a DXF circle has no direction.
+
+Check a .tap
+------------
+After LaserControl saves the program, use Check LaserControl .tap.
+NestClean lays the cuts on the drawing.
+  Red    a hole or contour with no matching cut
+  Amber  a cut that does not sit on the drawing
+Lead-ins shorter than 0.35 in are ignored. Anything farther than
+0.040 in from the line is a miss. Rapids (G0) are not cuts.
 
 
 Chrome on this PC
