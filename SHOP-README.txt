@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.12
+Version 1.2.13
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -115,12 +115,13 @@ circles — a DXF circle has no direction.
 Check a .tap
 ------------
 After LaserControl saves the program, use Check LaserControl .tap.
-The blue line is the path Apollo wrote. If the origins differ, NestClean
-slides the path onto the nest and says how many inches X and Y moved.
+White is the nest. Green is the Apollo path sitting on that same line.
+Blue is the path where it does not meet the nest. Amber is a cut off
+the nest. Red is nest with no cut. A correct sheet is green on the
+profiles, with no amber and no red.
+If the origins differ, NestClean slides the path onto the nest.
 Offset X and Offset Y add more, in inches, if it is still short.
 If Apollo turned the job, NestClean turns it back so it sits on the nest.
-  Red    a hole or contour with no matching cut
-  Amber  a cut that does not sit on the drawing
 Lead-ins shorter than 0.35 in are ignored. Anything farther than
 0.040 in from the line is a miss. Rapids (G0) are not cuts.
 
