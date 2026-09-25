@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.13
+Version 1.2.14
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -39,8 +39,10 @@ Export flavor (next to the buttons)
   Lines only   No arcs. Last resort.
 
 The file is ordered for the torch: holes, then cutouts, then the outer,
-one blank at a time, row by row. If LaserControl still jumps, turn off
-path optimize so it follows this order.
+one blank at a time. The head starts at the far end and steps across
+the sheet. If LaserControl still jumps, turn off path optimize so it
+follows this order. A partial sheet is Pick, Window, or Crossing, then
+Write selected or Write all but selected.
 
 Close-gap welds open contours (Fusion sketch gaps). Raise it if paths
 still show as open.
@@ -105,8 +107,10 @@ to the next DXF. Empty slots on an incomplete last row stay
 usable — leftover is not only the rectangle outside the first nest.
 Spread runs after that nest — it does not change how many fit.
 
-Cut order in the DXF: holes → cutouts → outer, then the next blank,
-row by row, standing leftovers last.
+Cut order in the DXF and in a corrected .tap: holes, then cutouts, then
+the outer. The next blank is across the sheet, starting at the far end
+(high X) and stepping toward the near end. A finished column stays
+behind the head.
 
 Every outside is wound the same way. Every cutout is wound the opposite
 way, so LaserControl's kerf offset stays on the scrap side. Circles stay
@@ -133,11 +137,14 @@ be rewritten in the .tap. The new file:
   - drops a cut that is not on a blank
   - copies a missing hole from a hole Apollo did cut
   - cuts the insides of a blank, then its outline, then the next blank
-The head follows the row. It does not jump across a blank that is
-already free to tilt. If Apollo turned the job 90°, the corrected
-file stays turned that way so it still runs. Feed, pierce, and laser
-on/off stay as Apollo wrote them. Kerf offset on a cut that is already
-in the right place is left alone. The original .tap is not changed.
+The head starts at the far end and steps across the sheet. It does not
+travel back over a blank that is already free to tilt. Pick, Window, or
+Crossing on the sheet, then Write selected or Write all but selected,
+to finish a partial sheet without letting LaserControl reorder the job.
+If Apollo turned the job 90°, the corrected file stays turned that way
+so it still runs. Feed, pierce, and laser on/off stay as Apollo wrote
+them. Kerf offset on a cut that is already in the right place is left
+alone. The original .tap is not changed.
 
 
 Chrome on this PC
