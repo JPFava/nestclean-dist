@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.14
+Version 1.2.15
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -41,8 +41,10 @@ Export flavor (next to the buttons)
 The file is ordered for the torch: holes, then cutouts, then the outer,
 one blank at a time. The head starts at the far end and steps across
 the sheet. If LaserControl still jumps, turn off path optimize so it
-follows this order. A partial sheet is Pick, Window, or Crossing, then
-Write selected or Write all but selected.
+follows this order. After the nest is built, Pick, Window, or Crossing
+selects blanks with no LaserControl file. DXF of selected, or DXF of
+the rest, is only those blanks. A tap of the same set is there only
+after you have loaded a .tap.
 
 Close-gap welds open contours (Fusion sketch gaps). Raise it if paths
 still show as open.
