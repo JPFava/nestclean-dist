@@ -1,6 +1,6 @@
 # NestClean
 
-Shop-floor DXF cleaner and blank nester for Langmuir Apollo / FireControl.
+Shop-floor DXF cleaner and blank nester for Langmuir Apollo / LaserControl.
 
 **Always the latest zip**
 

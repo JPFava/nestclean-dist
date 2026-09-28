@@ -1,11 +1,11 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.19
+Version 1.2.20
 
 Corner feed (this version)
 --------------------------
-v1.2.18 is the last release without it. To reverse the addition, use
-that zip, or uncheck Slow corners. The check is on by default.
+v1.2.18 is the last release without it. Slow corners is off until you
+check it. Leave it unchecked for the same TAP as that older release.
 
 Slow corners runs after the cut order is rewritten. It only changes
 feed near a direction change. It reads the F already in the file
