@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.21
+Version 1.2.22
 
 Corner feed (this version)
 --------------------------
@@ -88,10 +88,12 @@ Set quantity. Set the sheet.
 Sheet W / H     Stock size in inches. These boxes stay the size you typed.
 
 Rotate plate 90°
-                Spins the steel under the machine axes. The blue dot is
-                0,0. The red arrow is +X and the green arrow is +Y. Those
-                do not turn. Each click moves 0,0 to the next corner of
-                the plate. Download the laser DXF after you turn it.
+                Spins the steel. The blue dot stays at the upper left.
+                That is machine 0,0. Red +X points down the plate.
+                Green +Y points to the right. Those arrows do not turn.
+                The laser DXF is written in those machine axes, which is
+                how Apollo places the file. The sheet size boxes stay
+                the stock you typed.
 Border          Keep-out from the plate edge.
 Min gap         Floor, measured curve-to-curve (not box-to-box at the
                 cone tips). After the pack, Spread makes that gap the
