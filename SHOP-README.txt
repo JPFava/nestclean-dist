@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.22
+Version 1.2.23
 
 Corner feed (this version)
 --------------------------
@@ -111,7 +111,8 @@ Alternate 180°  Flip every other column (tip against handle along the row).
 
 Mirror rows      Turn every other row over so the tall tab sits in the
                 notch beside the other row's tab. Spread does not open
-                those rows. Leave it off for blanks that do not nest.
+                those rows. If Alternate 180° would loosen that nest,
+                the tighter tab nest is used when it fits the same count.
 
 Spread          Extra plate goes into the gaps. Mixed nests fill the
                 leftover height (the empty top). 90° leftovers stay in a
