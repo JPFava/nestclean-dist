@@ -1,6 +1,19 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.18
+Version 1.2.19
+
+Corner feed (this version)
+--------------------------
+v1.2.18 is the last release without it. To reverse the addition, use
+that zip, or uncheck Slow corners. The check is on by default.
+
+Slow corners runs after the cut order is rewritten. It only changes
+feed near a direction change. It reads the F already in the file
+(often the header) and scales it, then puts that feed back.
+It does not change power, pierce, height, or beam on/off.
+Small holes stay at the programmed feed.
+Material picks a starting scale. The four numbers under it are saved
+on this browser. Thicker plate or oxygen should sit closer to 1.0.
 
 Clean a nested knife-blank DXF for the laser, or array blanks onto a sheet
 yourself. Download R12. Load that in LaserControl.
@@ -148,8 +161,9 @@ travel back over a blank that is already free to tilt. Pick, Window, or
 Crossing on the sheet, then Write selected or Write all but selected,
 to finish a partial sheet without letting LaserControl reorder the job.
 If Apollo turned the job 90°, the corrected file stays turned that way
-so it still runs. Feed, pierce, and laser on/off stay as Apollo wrote
-them. Kerf offset on a cut that is already in the right place is left
+so it still runs. Pierce and laser on/off stay as Apollo wrote them.
+With Slow corners on, feed is scaled down at corners and restored
+after. Kerf offset on a cut that is already in the right place is left
 alone. The original .tap is not changed.
 
 
