@@ -52,10 +52,10 @@ Export flavor (next to the buttons)
   Lines only   No arcs. Last resort.
 
 The file is ordered for the torch: holes, then cutouts, then the outer,
-one blank at a time. Numbers on the nest are that order. 1 is the blank
-at maximum X and maximum Y. The head snakes across that band, then steps
-toward the origin. If LaserControl still jumps, turn off path optimize
-so it follows this order. After the nest is built, Pick, Window, or Crossing
+one blank at a time. Numbers on the nest are that order. 1 is the
+rightmost column (maximum Y). The whole column is cut before the
+gantry beam steps to a lower Y. If LaserControl still jumps, turn off
+path optimize so it follows this order. After the nest is built, Pick, Window, or Crossing
 selects blanks with no LaserControl file. DXF of selected, or DXF of
 the rest, is only those blanks. A tap of the same set is there only
 after you have loaded a .tap.
@@ -137,9 +137,8 @@ usable — leftover is not only the rectangle outside the first nest.
 Spread runs after that nest — it does not change how many fit.
 
 Cut order in the DXF and in a corrected .tap: holes, then cutouts, then
-the outer. The next blank stays in the same band, starting at maximum
-X and maximum Y and snaking toward minimum Y, then the next lower X.
-A finished band stays behind the head.
+the outer. The head rides on the Y gantry, so every blank in a column
+is finished before Y steps down. Columns run from maximum Y to minimum Y.
 
 Every outside is wound the same way. Every cutout is wound the opposite
 way, so LaserControl's kerf offset stays on the scrap side. Circles stay
@@ -166,8 +165,9 @@ be rewritten in the .tap. The new file:
   - drops a cut that is not on a blank
   - copies a missing hole from a hole Apollo did cut
   - cuts the insides of a blank, then its outline, then the next blank
-The head starts at maximum X,Y and snakes toward the origin. It does not
-travel back over a blank that is already free to tilt. Pick, Window, or
+The head finishes one Y column, starting at the right, before the beam
+moves left. It does not travel back over a blank that is already free
+to tilt. Pick, Window, or
 Crossing on the sheet, then Write selected or Write all but selected,
 to finish a partial sheet without letting LaserControl reorder the job.
 If Apollo turned the job 90°, the corrected file stays turned that way
