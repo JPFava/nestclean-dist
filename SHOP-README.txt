@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 2.0.1
+Version 2.0.2
 
 Corner feed (this version)
 --------------------------
@@ -199,8 +199,10 @@ makes a program the Apollo will run.
   - No power, no pierce time, no focus, no cut height. Select the
     material profile on the Apollo (for 3 mm 14C28N that is
     0125 14C28N N2 035 2.0 -1.4) and set that profile's kerf to 0.
-    NestClean already moved the path by half the kerf: outline outward,
-    hole inward, so the finished size matches the DXF.
+    The Kerf width box is the full slot the beam removes (measured hole
+    ID minus the path diameter). Path 0.500 and ID 0.510 means enter
+    0.010. NestClean moves each edge by half of that: outline outward,
+    hole inward. Zero leaves the beam on the CAD line.
   - A hole is pierced in the slug, then a tangent arc joins the circle.
     The outline is pierced in the scrap at the middle of the longest
     straight side, never on a corner or a small fillet.
