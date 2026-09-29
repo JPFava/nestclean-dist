@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 1.2.26
+Version 2.0.0
 
 Corner feed (this version)
 --------------------------
@@ -175,6 +175,33 @@ so it still runs. Pierce and laser on/off stay as Apollo wrote them.
 With Slow corners on, feed is scaled down at corners and restored
 after. Kerf offset on a cut that is already in the right place is left
 alone. The original .tap is not changed.
+
+Write Apollo .tap
+-----------------
+Skip LaserControl CAM. With a DXF or a nest on screen, Write Apollo .tap
+makes a program the Apollo will run.
+
+  - Inches, absolute, one feed in the header.
+  - Laser on is M64 P0. Laser off is M65 P0. The same header handshake
+    LaserControl writes (M64 P1 / M65 P1) is kept.
+  - No power, no pierce time, no focus, no cut height. Select the
+    material profile on the Apollo (for 3 mm 14C28N that is
+    0125 14C28N N2 035 2.0 -1.4) and set that profile's kerf to 0.
+    NestClean already moved the path by half the kerf: outline outward,
+    hole inward, so the finished size matches the DXF.
+  - A hole is pierced in the slug, then a tangent arc joins the circle.
+    The outline is pierced in the scrap at the middle of the longest
+    straight side, never on a corner or a small fillet.
+  - Insides are cut before the outline. Blanks follow the gantry:
+    one Y column, from the right, before the beam steps left.
+  - Slower holes and Slow corners stay off until you check them.
+    Slower holes use 0.67 times the cut feed on the hole only, then
+    put the cut feed back. Slow corners only changes feed.
+
+Check LaserControl .tap and Write corrected .tap still work when you
+already have a program from LaserControl. Write Apollo .tap does not
+need that file.
+
 
 
 Chrome on this PC
