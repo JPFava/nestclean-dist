@@ -1,6 +1,6 @@
 NestClean
 Langmuir Apollo / LaserControl
-Version 2.0.0
+Version 2.0.1
 
 Corner feed (this version)
 --------------------------
@@ -175,6 +175,18 @@ so it still runs. Pierce and laser on/off stay as Apollo wrote them.
 With Slow corners on, feed is scaled down at corners and restored
 after. Kerf offset on a cut that is already in the right place is left
 alone. The original .tap is not changed.
+
+Steps
+-----
+Load, Clean, Nest, Profile, and Export. Only the open step is on screen
+so the sheet stays large. Profile holds kerf, feed, slower holes, and
+slow corners. Export writes the DXF and the TAP.
+
+Cut order
+---------
+1 is the far-right blank. The head finishes every blank in that column
+before the beam steps left. It does not sweep across a row. Side-by-side
+arms stay in order, right to left.
 
 Write Apollo .tap
 -----------------
